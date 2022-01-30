@@ -39,7 +39,6 @@ const AddReview = props => {
           console.log(e);
         });
     } else {
-      console.log("YES+location.state.currentReview._id", location.state.currentReview._id)
       RestaurantDataService.createReview(data)
         .then(response => {
           setSubmitted(true);

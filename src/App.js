@@ -48,25 +48,10 @@ function App() {
 
       <div className="container mt-3">
           <Routes>
-              <Route exact path="/" element={<RestaurantsList/>} />
-              <Route 
-                path="/restaurants/:id/review"
-                render={(props) => (
-                  <AddReview {...props} user={user} />
-                )}
-              />
-              <Route 
-                path="/restaurants/:id"
-                render={(props) => (
-                  <Restaurant {...props} user={<user/>} />
-                )}
-              />
-              <Route 
-                path="/login"
-                render={(props) => (
-                  <Login {...props} login={<login/>} />
-                )}
-              />
+              <Route exact path="/restaurants" element={<RestaurantsList/>} />
+              <Route path="/restaurants/:id/review" element={<AddReview/>} />
+              <Route path="/restaurants/:id" element={<Restaurant/>}/>
+              <Route path="/login" element={<Login/>} />
             </Routes>
       </div>
     </div>

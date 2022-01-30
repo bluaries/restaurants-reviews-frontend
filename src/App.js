@@ -1,7 +1,6 @@
 import React from "react";
 
-// use Router instead Switch to solving issues or downgrade version to react-router-dom@5.2.0
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import AddReview from "./components/add-review";
@@ -23,7 +22,6 @@ function App() {
   return (
     <div>
       <nav className="navbar navbar-expand navbar-dark bg-dark">
-        <Router>
         <a href="/restaurants" className="navbar-brand">
           Restaurant Reviews
         </a>
@@ -46,11 +44,9 @@ function App() {
 
           </li>
         </div>
-        </Router>
       </nav>
 
       <div className="container mt-3">
-        <Router>
           <Routes>
               <Route exact path="/" element={<RestaurantsList/>} />
               <Route 
@@ -72,7 +68,6 @@ function App() {
                 )}
               />
             </Routes>
-        </Router>
       </div>
     </div>
   );
